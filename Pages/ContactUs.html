@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../css/contactus.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title>Call the jungle phone</title>
+
+
+  </head>
+  <body>
+
+    <h1> Got a question? Let us know! </h1>
+
+    <br>
+
+    <form class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="emailf">Please enter your email address so we know who to reply to </label>
+    <input type="email" class="form-control" name="emailf" aria-describedby="emailHelp" placeholder="Please add your email for when you're not in the Jungle" required>
+     <label class="e-mailcheck" for="invalidCheck">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">What do you think of our website?</label>
+    <select class="form-control" id="options">
+      <option value="1">I love it</option>
+      <option value="2">Weird but awesome</option>
+      <option value="3">Seems like time could have been better spent</option>
+      <option value="4">You guys should see a head doctor</option>
+      <option value="5">I am a trump supporter</option>
+       <label class="options" for="invalidCheck">
+    </select>
+  </div>
+
+  <div class="form-group">
+   <label for="comments">Send us comments, questions or suggestions!</label>
+   <textarea class="form-control" name="comments" rows="3"></textarea>
+ </div>
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>A Trump Supporter?!</strong> We are terribly sorry to hear that. Now please go away.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button> -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
