@@ -96,13 +96,9 @@ h3{
 .marquee {
   color: white;
   font-family: fantasy, cursive, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
 }
 
-.greenbackground{
-  background-color: green;
-  width: 100%;
-}
 
 /* Social media icons formatting */
 
