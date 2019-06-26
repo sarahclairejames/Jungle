@@ -11,45 +11,66 @@
   </head>
   <body>
 
-    <h1> Got a question? Let us know! </h1>
+    <h1> Got a question? Let us know (if you have to)! </h1>
 
     <br>
 
-    <form class="needs-validation" novalidate>
-  <div class="form-group">
+    <form>
+  <div class="needs-validation">
     <label for="emailf">Please enter your email address so we know who to reply to </label>
     <input type="email" class="form-control" name="emailf" aria-describedby="emailHelp" placeholder="Please add your email for when you're not in the Jungle" required>
      <label class="e-mailcheck" for="invalidCheck">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
 
-  <div class="form-group">
+  <div>
     <label for="exampleFormControlSelect1">What do you think of our website?</label>
     <select class="form-control" id="options">
       <option value="1">I love it</option>
       <option value="2">Weird but awesome</option>
       <option value="3">Seems like time could have been better spent</option>
       <option value="4">You guys should see a head doctor</option>
-      <option value="5">I am a trump supporter</option>
-       <label class="options" for="invalidCheck">
+      <option value="5">I am a trump supporter </option>
+    <label class="options" for="invalidCheck">
     </select>
   </div>
 
-  <div class="form-group">
+  <div>
    <label for="comments">Send us comments, questions or suggestions!</label>
    <textarea class="form-control" name="comments" rows="3"></textarea>
  </div>
 
- <button type="submit" class="btn btn-primary">Submit</button>
+ <button type="submit" onclick="trumpsupporter()" class="btn btn-primary">Submit</button>
+</form>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+function trumpsupporter() {
+
+  if (document.getElementById("options").value==5) {
+    alert("Sorry to hear that. Please go away!")
+  }
+}
+
+function trumpsupporter() {
+
+  if (document.getElementById("options").value==4) {
+    alert("Probably, but at least we're happy")
+  }
+}
+
+function trumpsupporter() {
+
+  if (document.getElementById("options").value==1) {
+    alert("Awww, thanks")
+  }
+}
+
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
+
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
@@ -62,13 +83,6 @@
   }, false);
 })();
 </script>
-
-<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>A Trump Supporter?!</strong> We are terribly sorry to hear that. Now please go away.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button> -->
-
 
 
 
