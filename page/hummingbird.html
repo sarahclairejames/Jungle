@@ -2,7 +2,7 @@
 
 <html lang="en" dir="ltr">
   <head>
-<!-- experiment - delete if doesn't work -->
+
 
 <script>
 
@@ -17,7 +17,7 @@ var html5_audiotypes={
 
 function createsoundbite(sound){
 	var html5audio=document.createElement('audio')
-	if (html5audio.canPlayType){ 
+	if (html5audio.canPlayType){
 		for (var i=0; i<arguments.length; i++){
 			var sourceel=document.createElement('source')
 			sourceel.setAttribute('src', arguments[i])
@@ -39,6 +39,7 @@ function createsoundbite(sound){
 }
 
 
+
 var mouseoversound=createsoundbite(src="../sounds/TrumpBigly.mp3","../sounds/junglesound.mp3")
 var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/junglesound.mp3")
 
@@ -47,9 +48,10 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 
 
 
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="../css/animals.css">
+<link rel="stylesheet" href="../cssfolder/animals.css">
 <style>
 #overlay {
   position: fixed;
@@ -76,17 +78,17 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 }
 </style>
 
-<title> Frog v Trump  </title>
+<title> Hummingbird v Trump  </title>
   </head>
 
   <body>
     <div class="card-deck">
 
       <div class="card" id="card1">
-        <img src="../images/Blackpanther.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of Frog">
+        <img src="../image/hummingbird.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of panther">
 
         <div class="card-body">
-          <h5 class="card-title">The Frog</h5>
+          <h5 class="card-title">The Hummingbird</h5>
 
             <div class="column"
               style="background-color:#aaa;">
@@ -105,13 +107,13 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 
             <div class="column"
               style="background-color:#bbb;">
-              <p class="card-text"> 2 inches
+              <p class="card-text"> tiny
             <br>
               <p class="card-text"> 8/10 </>
 
             <br>
 
-              <p class="card-text"> 0/10 </>
+              <p class="card-text"> 1/10 </>
 
               </p>
 
@@ -120,9 +122,9 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
       </div>
 
       <div class="card"id="card2">
-        <img src="../images/Trumpforpanther.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
+        <img src="../image/trump5.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
         <div class="card-body">
-          <h5 class="card-title">Thoughtful Trump</h5>
+          <h5 class="card-title">Youthful Trump</h5>
 
           <div class="column"
             style="background-color:#aaa;">
@@ -138,9 +140,9 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
                 style="background-color:#bbb;">
                 <p class="card-text"> tiny
                   <br>
-                <p class="card-text"> 1/10 </>
+                <p class="card-text"> 2/10 </>
                   <br>
-                <p class="card-text"> 0/10 </>
+                <p class="card-text"> 5/10 </>
                 </p>
               </div>
 
@@ -153,7 +155,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
   <br>
 
   <div id="overlay" onclick="off()">
-    <div id="text">THE FROG WINS</div>
+    <div id="text">THE HUMMINGBIRD WINS</div>
   </div>
 
 <div style="padding:20px">

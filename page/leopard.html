@@ -2,56 +2,12 @@
 
 <html lang="en" dir="ltr">
   <head>
-<!-- As a novelty - this page includes sounds if you roll over the pictures, script below -->
 
-<script>
-
-// sound when roll mouse over pictures
-
-var html5_audiotypes={
-	"mp3": "audio/mpeg",
-	"mp4": "audio/mp4",
-	"ogg": "audio/ogg",
-	"wav": "audio/wav"
-}
-
-function createsoundbite(sound){
-	var html5audio=document.createElement('audio')
-	if (html5audio.canPlayType){ //check support for HTML5 audio
-		for (var i=0; i<arguments.length; i++){
-			var sourceel=document.createElement('source')
-			sourceel.setAttribute('src', arguments[i])
-			if (arguments[i].match(/\.(\w+)$/i))
-				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
-			html5audio.appendChild(sourceel)
-		}
-		html5audio.load()
-		html5audio.playclip=function(){
-			html5audio.pause()
-			html5audio.currentTime=0
-			html5audio.play()
-		}
-		return html5audio
-	}
-	else{
-		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
-	}
-}
-
-//Initialize two sound clips with 1 fallback file each:
-
-var mouseoversound=createsoundbite(src="../sounds/TrumpBigly.mp3","../sounds/junglesound.mp3")
-var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/junglesound.mp3")
-
-
-</script>
-
-<!-- end of random hover on sound -->
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="../css/animals.css">
+<link rel="stylesheet" href="../cssfolder/animals.css">
 <style>
 #overlay {
   position: fixed;
@@ -78,19 +34,17 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 }
 </style>
 
-<title> Panther v Trump  </title>
+<title> Leopard v Trump  </title>
   </head>
 
   <body>
-
-
     <div class="card-deck">
 
       <div class="card" id="card1">
-        <img src="../images/blackpanther.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of panther">
+        <img src="../image/leopard.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of leopard">
 
         <div class="card-body">
-          <h5 class="card-title">The Panther</h5>
+          <h5 class="card-title">The Leopard</h5>
 
             <div class="column"
               style="background-color:#aaa;">
@@ -109,7 +63,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 
             <div class="column"
               style="background-color:#bbb;">
-              <p class="card-text"> 2 inches
+              <p class="card-text"> 5 inches
             <br>
               <p class="card-text"> 8/10 </>
 
@@ -124,9 +78,9 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
       </div>
 
       <div class="card"id="card2">
-        <img src="../images/trumpforpanther.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
+        <img src="../image/trump6.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
         <div class="card-body">
-          <h5 class="card-title">Thoughtful Trump</h5>
+          <h5 class="card-title">Sneery Trump</h5>
 
           <div class="column"
             style="background-color:#aaa;">
@@ -142,9 +96,9 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
                 style="background-color:#bbb;">
                 <p class="card-text"> tiny
                   <br>
-                <p class="card-text"> 1/10 </>
+                <p class="card-text"> Sub Zero </>
                   <br>
-                <p class="card-text"> 0/10 </>
+                <p class="card-text"> Tangoed </>
                 </p>
               </div>
 
@@ -157,7 +111,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
   <br>
 
   <div id="overlay" onclick="off()">
-    <div id="text">THE PANTHER WINS</div>
+    <div id="text">THE LEOPARD WINS (of course!)</div>
   </div>
 
 <div style="padding:20px">
