@@ -6,13 +6,9 @@
 
 <script>
 
-// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
-// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+// sound when roll mouse over pictures
 
-//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
-//** Call: uniquevar.playclip() to play sound
-
-var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+var html5_audiotypes={
 	"mp3": "audio/mpeg",
 	"mp4": "audio/mp4",
 	"ogg": "audio/ogg",
@@ -91,7 +87,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
     <div class="card-deck">
 
       <div class="card" id="card1">
-        <img src="../images/Blackpanther.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of panther">
+        <img src="../images/blackpanther.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of panther">
 
         <div class="card-body">
           <h5 class="card-title">The Panther</h5>
@@ -128,7 +124,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
       </div>
 
       <div class="card"id="card2">
-        <img src="../images/Trumpforpanther.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
+        <img src="../images/trumpforpanther.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
         <div class="card-body">
           <h5 class="card-title">Thoughtful Trump</h5>
 
