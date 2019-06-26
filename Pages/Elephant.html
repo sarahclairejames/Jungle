@@ -2,55 +2,49 @@
 
 <html lang="en" dir="ltr">
   <head>
-<!-- As a novelty - this page includes sounds if you roll over the pictures, script below -->
+<!-- experiment - delete if doesn't work -->
 
 <script>
 
-// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
-// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+  var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+  	"mp3": "audio/mpeg",
+  	"mp4": "audio/mp4",
+  	"ogg": "audio/ogg",
+  	"wav": "audio/wav"
+  }
 
-//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
-//** Call: uniquevar.playclip() to play sound
+  function createsoundbite(sound){
+  	var html5audio=document.createElement('audio')
+  	if (html5audio.canPlayType){ //check support for HTML5 audio
+  		for (var i=0; i<arguments.length; i++){
+  			var sourceel=document.createElement('source')
+  			sourceel.setAttribute('src', arguments[i])
+  			if (arguments[i].match(/\.(\w+)$/i))
+  				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+  			html5audio.appendChild(sourceel)
+  		}
+  		html5audio.load()
+  		html5audio.playclip=function(){
+  			html5audio.pause()
+  			html5audio.currentTime=0
+  			html5audio.play()
+  		}
+  		return html5audio
+  	}
+  	else{
+  		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+  	}
+  }
 
-var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
-	"mp3": "audio/mpeg",
-	"mp4": "audio/mp4",
-	"ogg": "audio/ogg",
-	"wav": "audio/wav"
-}
+  //Initialize two sound clips with 1 fallback file each:
 
-function createsoundbite(sound){
-	var html5audio=document.createElement('audio')
-	if (html5audio.canPlayType){ //check support for HTML5 audio
-		for (var i=0; i<arguments.length; i++){
-			var sourceel=document.createElement('source')
-			sourceel.setAttribute('src', arguments[i])
-			if (arguments[i].match(/\.(\w+)$/i))
-				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
-			html5audio.appendChild(sourceel)
-		}
-		html5audio.load()
-		html5audio.playclip=function(){
-			html5audio.pause()
-			html5audio.currentTime=0
-			html5audio.play()
-		}
-		return html5audio
-	}
-	else{
-		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
-	}
-}
-
-//Initialize two sound clips with 1 fallback file each:
-
-var mouseoversound=createsoundbite(src="../sounds/TrumpBigly.mp3","../sounds/junglesound.mp3")
-var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/junglesound.mp3")
+  var mouseoversound=createsoundbite(src="../sounds/Trumpsue.mp3","../sounds/junglesound.mp3")
+  var mouseoversound2=createsoundbite(src="../sounds/elephantsound.mp3","../sounds/junglesound.mp3")
 
 
 </script>
 
-<!-- end of random hover on sound -->
+<!-- end of experiment -->
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,19 +76,19 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 }
 </style>
 
-<title> Panther v Trump  </title>
+<title> Elephant v Trump  </title>
   </head>
 
   <body>
-
-
     <div class="card-deck">
 
+<!-- Card which displays picture of elephant -->
+
       <div class="card" id="card1">
-        <img src="../images/Blackpanther.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of panther">
+        <img src="../images/elephant2.jpg" class="card-img-top" onmouseover="mouseoversound2.playclip()" alt="Image of elephant">
 
         <div class="card-body">
-          <h5 class="card-title">The Panther</h5>
+          <h5 class="card-title">The Elephant</h5>
 
             <div class="column"
               style="background-color:#aaa;">
@@ -128,9 +122,9 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
       </div>
 
       <div class="card"id="card2">
-        <img src="../images/Trumpforpanther.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
+        <img src="../images/Trump4.jpg" class="card-img-top" onmouseover="mouseoversound.playclip()" alt="Image of a babboon">
         <div class="card-body">
-          <h5 class="card-title">Thoughtful Trump</h5>
+          <h5 class="card-title">Caught in the wind Trump</h5>
 
           <div class="column"
             style="background-color:#aaa;">
@@ -161,7 +155,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
   <br>
 
   <div id="overlay" onclick="off()">
-    <div id="text">THE PANTHER WINS</div>
+    <div id="text">THE ELEPHANT WINS</div>
   </div>
 
 <div style="padding:20px">
