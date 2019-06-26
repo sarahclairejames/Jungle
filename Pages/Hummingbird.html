@@ -2,17 +2,13 @@
 
 <html lang="en" dir="ltr">
   <head>
-<!-- experiment - delete if doesn't work -->
+
 
 <script>
 
-// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
-// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
 
-//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
-//** Call: uniquevar.playclip() to play sound
 
-var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+var html5_audiotypes={
 	"mp3": "audio/mpeg",
 	"mp4": "audio/mp4",
 	"ogg": "audio/ogg",
@@ -21,7 +17,7 @@ var html5_audiotypes={ //define list of audio file extensions and their associat
 
 function createsoundbite(sound){
 	var html5audio=document.createElement('audio')
-	if (html5audio.canPlayType){ //check support for HTML5 audio
+	if (html5audio.canPlayType){
 		for (var i=0; i<arguments.length; i++){
 			var sourceel=document.createElement('source')
 			sourceel.setAttribute('src', arguments[i])
@@ -42,7 +38,7 @@ function createsoundbite(sound){
 	}
 }
 
-//Initialize two sound clips with 1 fallback file each:
+
 
 var mouseoversound=createsoundbite(src="../sounds/TrumpBigly.mp3","../sounds/junglesound.mp3")
 var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/junglesound.mp3")
@@ -50,7 +46,7 @@ var mouseoversound2=createsoundbite(src="../sounds/Panther3.mp3","../sounds/jung
 
 </script>
 
-<!-- end of experiment -->
+
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">

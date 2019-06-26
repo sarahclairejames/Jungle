@@ -2,6 +2,7 @@
 
 body{
   background-color: black;
+
 }
 
 ul {
@@ -10,7 +11,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  font-family: "chalkduster", arial;
+  font-family: "chalkduster" arial;
 }
 
 li {
@@ -67,13 +68,13 @@ li.dropdown2 {
 /* Heading formatting */
 
 h1{
-  font-family: Chalkduster, cursive, arial;
+  font-family: "Chalkduster" arial;
   color: green;
   text-align: center;
 }
 
 h2{
-  font-family: arial;
+  font-family: "Chalkduster" arial;
   color: green;
   text-align: center;
 }
@@ -94,7 +95,7 @@ h3{
 
 .marquee {
   color: white;
-  font-family: fantasy, cursive, sans-serif;
+  font-family: "Chalkduster" arial;
   font-size: 2em;
 }
 
